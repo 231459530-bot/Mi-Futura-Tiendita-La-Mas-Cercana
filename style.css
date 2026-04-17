@@ -228,7 +228,7 @@ to { transform: translateY(0); opacity: 1; }
 /* =========================
 RESPONSIVE
 ========================= */
-@media (max-width: 768px){
+/*@media (max-width: 768px){
 
 header{
     flex-direction: column;
@@ -247,5 +247,72 @@ header h1{
 }
 
 
+}*/
+/* =========================
+   RESPONSIVE - PAGINA PRINCIPAL
+   ========================= */
+@media (max-width: 768px) {
+
+    /* 1. Ajuste del encabezado para que no se amontone */
+    header {
+        flex-direction: column;
+        padding: 20px 10px;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 1.2em; /* Reducimos un poco más el tamaño */
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    header img {
+        width: 60px; /* Logos más pequeños en móvil */
+        height: 60px;
+    }
+
+    /* 2. EL BOTÓN: Aquí evitamos que se rompa el diseño */
+    .dropbtn {
+        width: 90%;          /* Que no toque los bordes del celular */
+        max-width: 300px;    /* Que no se vea gigante en tablets */
+        margin: 15px auto;   /* Lo centramos */
+        display: block;      /* Lo volvemos bloque para centrarlo con auto */
+        font-size: 15px;
+        padding: 12px 10px;  /* Reducimos padding lateral */
+        animation: none;     /* Quitamos animación para estabilidad visual */
+        white-space: normal; /* Permite que el texto baje si es muy largo */
+    }
+
+    /* 3. EL MENÚ DESPLEGABLE */
+    .dropdown-content {
+        display: block;      /* Lo mantenemos visible como pediste */
+        position: relative;  /* Cambiamos de static/absolute a relative */
+        width: 90%;
+        margin: 0 auto 20px auto;
+        min-width: unset;    /* Quitamos el ancho mínimo de 250px */
+        box-shadow: none;    /* Menos carga visual */
+        background: rgba(211, 199, 221, 0.5); /* Un tono más suave para móvil */
+    }
+
+    .dropdown-content a {
+        padding: 12px;
+        font-size: 14px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+
+    /* 4. Ajuste de la imagen principal y contacto */
+    #Imagen img {
+        width: 100%;
+        height: auto;
+    }
+
+    #Contacto {
+        padding: 20px;
+    }
+
+    #Contacto a {
+        word-break: break-all; /* Evita que correos largos rompan el margen */
+    }
 }
 
