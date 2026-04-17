@@ -186,6 +186,38 @@ transition: 0.3s;
 transform: scale(1.1);
 }
 
+/* Contenedor para centrar el elemento */
+.contenedor-boton {
+    display: flex;          /* Usamos flexbox para centrar */
+    justify-content: center; /* Centrado horizontal */
+    width: 100%;            /* Ocupa todo el ancho disponible */
+    margin: 30px 0;         /* Espacio arriba y abajo del botón */
+}
+
+/* Estilos del botón */
+.btn-gantt {
+    background-color: #007bff; /* El azul de tu captura */
+    color: white !important;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    
+    /* CONTROL DE TAMAÑO */
+    width: auto;            /* El botón se ajusta al texto */
+    min-width: 250px;       /* Tamaño mínimo para que no se vea muy pequeño */
+    max-width: 90% ;        /* Evita que se salga en pantallas de celular */
+    text-align: center;
+    
+    transition: 0.3s;       /* Animación suave */
+}
+
+/* Efecto al pasar el mouse */
+.btn-gantt:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Crece un poquito al seleccionarlo */
+}
 /* =========================
 FOOTER
 ========================= */
@@ -243,4 +275,22 @@ section{
 }
 
 
+}
+
+.contenedor-boton {
+        padding: 0 20px; /* Margen de seguridad a los lados */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-gantt {
+        width: 100%;           /* Ocupa todo el ancho del contenedor */
+        max-width: 300px;      /* Pero no deja que se vea gigante, se queda en un tamaño cómodo */
+        font-size: 16px;       /* Texto un poco más pequeño para que quepa en una línea */
+        padding: 15px 10px;    /* Más espacio para tocar con el dedo, menos a los lados */
+        display: block;        /* Cambia a bloque para controlar mejor el ancho */
+        text-align: center;
+        box-sizing: border-box; /* FUNDAMENTAL: evita que el padding sume ancho extra */
+    }
 }
